@@ -20,7 +20,7 @@
     ],
     "demo": [],
     "images": [],
-    "installable": true,
+    "installable": True,
     "auto_install": False,
     "application": False,
 }
