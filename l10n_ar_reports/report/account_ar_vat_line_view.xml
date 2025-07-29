@@ -33,9 +33,9 @@
     </record>
 
     <record id="view_account_ar_vat_line_tree" model="ir.ui.view">
-        <field name="name">account.ar.vat.line.tree</field>
-        <field name="model">account.ar.vat.line</field>
-        <field name="arch" type="xml">
+       <field name="name">account.ar.vat.line.tree</field>
+       <field name="model">account.ar.vat.line</field>
+       <field name="arch" type="xml">
           <tree editable="bottom">
             <field name="date"/>
             <field name="move_id"/>
@@ -57,8 +57,8 @@
             <field name="other_taxes" sum="Total"/>
             <field name="total" sum="Total"/>
             <button name="open_journal_entry" string="Open" type="object" icon="fa-external-link" help="Open journal entry"/>
-         </tree>
-        </field>
+          </tree>
+       </field>
     </record>
 
 
