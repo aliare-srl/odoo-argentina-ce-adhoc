@@ -35,6 +35,7 @@
     <record id="view_account_ar_vat_line_tree" model="ir.ui.view">
         <field name="name">account.ar.vat.line.tree</field>
         <field name="model">account.ar.vat.line</field>
+        <field name="type">tree</field> <!-- ESTA LÍNEA ES CLAVE -->
         <field name="arch" type="xml">
             <tree editable="bottom">
                 <field name="date" />
