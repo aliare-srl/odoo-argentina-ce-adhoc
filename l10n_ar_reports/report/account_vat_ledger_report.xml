@@ -1,3 +1,4 @@
+
 <?xml version="1.0"?>
 <odoo noupdate="1">
     <record id="account_vat_ledger_xlsx" model="ir.actions.report">
