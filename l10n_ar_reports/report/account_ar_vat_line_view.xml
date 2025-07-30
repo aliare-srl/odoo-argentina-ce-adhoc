@@ -35,6 +35,7 @@
     <record id="view_account_ar_vat_line_tree" model="ir.ui.view">
      <field name="name">account.ar.vat.line.tree</field>
      <field name="model">account.ar.vat.line</field>
+     <field name="type">tree</field> <!-- AÑADIDO -->   
       <field name="arch" type="xml">
        <tree>
             <field name="date" />
@@ -64,6 +65,7 @@
     <record id="view_account_ar_vat_line_pivot" model="ir.ui.view">
         <field name="name">account.ar.vat.line.pivot</field>
         <field name="model">account.ar.vat.line</field>
+        <field name="type">pivot</field> <!-- AÑADIDO -->
         <field name="arch" type="xml">
             <pivot>
                 <field name="move_type" type="row" />
