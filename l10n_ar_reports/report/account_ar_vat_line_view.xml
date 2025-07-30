@@ -62,30 +62,36 @@
       </field>
     </record>
 
-    <record id="view_account_ar_vat_line_pivot" model="ir.ui.view">
-        <field name="name">account.ar.vat.line.pivot</field>
-        <field name="model">account.ar.vat.line</field>
-        <field name="arch" type="xml">
-         
-                <field name="move_type" type="row" />
-                <field name="afip_responsibility_type_id" type="row" />
-                <field name="not_taxed" type="measure" />
-                <field name="base_25" type="measure" />
-                <field name="vat_25" type="measure" />
-                <field name="base_5" type="measure" />
-                <field name="vat_5" type="measure" />
-                <field name="base_10" type="measure" />
-                <field name="vat_10" type="measure" />
-                <field name="base_21" type="measure" />
-                <field name="vat_21" type="measure" />
-                <field name="base_27" type="measure" />
-                <field name="vat_27" type="measure" />
-                <field name="vat_per" type="measure" />
-                <field name="other_taxes" type="measure" />
-                <field name="total" type="measure" />
-
-        </field>
+    <record id="view_account_ar_vat_line_tree" model="ir.ui.view">
+      <field name="name">account.ar.vat.line.tree</field>
+      <field name="model">account.ar.vat.line</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="date"/>
+            <field name="move_id"/>
+            <field name="partner_id"/>
+            <field name="afip_responsibility_type_id"/>
+            <field name="cuit"/>
+            <field name="not_taxed" sum="Total" optional="hide"/>
+            <field name="base_25" sum="Total" optional="hide"/>
+            <field name="vat_25" sum="Total" optional="hide"/>
+            <field name="base_5" sum="Total" optional="hide"/>
+            <field name="vat_5" sum="Total" optional="hide"/>
+            <field name="base_10" sum="Total" optional="hide"/>
+            <field name="vat_10" sum="Total" optional="hide"/>
+            <field name="base_21" sum="Total" optional="show"/>
+            <field name="vat_21" sum="Total" optional="show"/>
+            <field name="base_27" sum="Total" optional="hide"/>
+            <field name="vat_27" sum="Total" optional="hide"/>
+            <field name="vat_per" sum="Total" optional="hide"/>
+            <field name="other_taxes" sum="Total"/>
+            <field name="total" sum="Total"/>
+            <button name="open_journal_entry" string="Open" type="object" icon="fa-external-link" help="Open journal entry"/>
+        </tree>
+      </field>
     </record>
+
 
     <record id="action_account_ar_vat_line" model="ir.actions.act_window">
         <field name="name">Análisis de IVA</field>
